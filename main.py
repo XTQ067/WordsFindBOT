@@ -70,14 +70,14 @@ def command_start(update, context: CallbackContext):
 
     if update.effective_chat.type == "private":
         
-        addme = InlineKeyboardButton(text="➕ Qurupa əlavə et ➕", url="https://t.me/WordsFindBot?startgroup=a") 
+        addme = InlineKeyboardButton(text="➕ Qrupa əlavə et ➕", url="https://t.me/WordsFindBot?startgroup=a") 
         sohbet = InlineKeyboardButton(text="⛑ Dəstək qrupu", url="https://t.me/neonsup") 
         oyun = InlineKeyboardButton(text="📲 Yeniliklər kanalı", url="https://t.me/NeonUserBot") 
        # admin = InlineKeyboardButton(text="", url="") 
 
         keyboard = [[addme, sohbet],[oyun]]
         reply_markup = InlineKeyboardMarkup(keyboard)
-        update.message.reply_text(f'**Salam {mention}!🛐 Mən sizin qurupunuzda oyun apara bilərəm... 🦕\n Lakin, ilk öncə məni qurupa əlavə edin. 😚**', reply_to_message_id=True, reply_markup=reply_markup, parse_mode=ParseMode.MARKDOWN)
+        update.message.reply_text(f'**Salam {mention}!🛐 Mən sizin qurupunuzda oyun apara bilərəm... 🦕\nLakin, ilk öncə məni qurupa əlavə edin. 😚**', reply_to_message_id=True, reply_markup=reply_markup, parse_mode=ParseMode.MARKDOWN)
     else:
         chat_id = update.message.chat.id
         user_id = update.message.from_user.id
