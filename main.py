@@ -71,7 +71,7 @@ def command_start(update, context: CallbackContext):
         oyun = InlineKeyboardButton(text="📲 Yeniliklər kanalı", url="https://t.me/NeonUserBot") 
        # admin = InlineKeyboardButton(text="", url="") 
 
-        keyboard = [[addme] [sohbet],[oyun]]
+        keyboard = [[addme, sohbet],[oyun]]
         reply_markup = InlineKeyboardMarkup(keyboard)
         update.message.reply_text('Salam! Mən sizin qurupunuzda insan adları tapmağ üçün yaradılmış Oyun botuyam. Məni qurupa əlavə edərək oynaya bilərsiz.', reply_to_message_id=True, reply_markup=reply_markup)
     else:
