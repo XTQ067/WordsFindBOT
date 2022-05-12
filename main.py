@@ -46,7 +46,7 @@ def help(update, context):
 def button(update, context):
     user_id = update.callback_query.from_user.id
     chat_id = update.callback_query.message.chat_id
-    bot = telegram.Bot(token=settings.TOKEN)
+    bot = telegram.Bot(token="5303350717:AAFEObavGgJvou7sF8LZHhxDFE3qX8U0YLY")
 
     game = get_or_create_game(chat_id)
 
