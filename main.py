@@ -66,7 +66,7 @@ def button(update, context):
 def command_start(update, context: CallbackContext):
     username = update.message.from_user.full_name
     user_id = update.message.from_user.id
-    mention = f"[username](tg://user?id={user_id})"
+    mention = f"[{username}](tg://user?id={user_id})"
 
     if update.effective_chat.type == "private":
         
