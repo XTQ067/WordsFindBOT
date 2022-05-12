@@ -66,14 +66,14 @@ def button(update, context):
 def command_start(update, context: CallbackContext):
     if update.effective_chat.type == "private":
         
-        addme = InlineKeyboardButton(text="➕ Qurupa Əlavə Et ➕", url="https://t.me/crolokgamebot?startgroup=a") 
-        sohbet = InlineKeyboardButton(text="⛑ Dəstək Qurupumuz", url="https://t.me/croloksup") 
-        oyun = InlineKeyboardButton(text="📲 Yeniliklər Kanlı", url="https://t.me/crolokofficial") 
-        admin = InlineKeyboardButton(text="Crolok MMC", url="https://t.me/CrolokMMC") 
+        addme = InlineKeyboardButton(text="➕ Qurupa əlavə et ➕", url="https://t.me/WordsFindBot?startgroup=a") 
+        sohbet = InlineKeyboardButton(text="⛑ Dəstək qrupu", url="https://t.me/neonsup") 
+        oyun = InlineKeyboardButton(text="📲 Yeniliklər kanalı", url="https://t.me/NeonUserBot") 
+       # admin = InlineKeyboardButton(text="", url="") 
 
-        keyboard = [[addme],[sohbet],[oyun],[admin]]
+        keyboard = [[addme] [sohbet],[oyun]]
         reply_markup = InlineKeyboardMarkup(keyboard)
-        update.message.reply_text('Salam!👋 Mən sizin qurupunuzda insan adları tapmağ üçün yaradılmış Oyun botuyam. Məni qurupa əlavə edərək oynaya bilərsiz.', reply_to_message_id=True, reply_markup=reply_markup)
+        update.message.reply_text('Salam! Mən sizin qurupunuzda insan adları tapmağ üçün yaradılmış Oyun botuyam. Məni qurupa əlavə edərək oynaya bilərsiz.', reply_to_message_id=True, reply_markup=reply_markup)
     else:
         chat_id = update.message.chat.id
         user_id = update.message.from_user.id
