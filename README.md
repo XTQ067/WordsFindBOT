@@ -1,1 +1,1 @@
-İnsan adları tapmağ üçün @K0mran tərəfindən yaradılmış oyun
+[Xwarn](HTTPS://T.ME/XWARN)
