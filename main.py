@@ -64,6 +64,9 @@ def button(update, context):
 
 
 def command_start(update, context: CallbackContext):
+        username = update.message.from_user.full_name
+        user_id = update.message.from_user.id
+        mention = f"[username](tg://user?id={user_id})"
     if update.effective_chat.type == "private":
         
         addme = InlineKeyboardButton(text="➕ Qurupa əlavə et ➕", url="https://t.me/WordsFindBot?startgroup=a") 
@@ -73,7 +76,7 @@ def command_start(update, context: CallbackContext):
 
         keyboard = [[addme, sohbet],[oyun]]
         reply_markup = InlineKeyboardMarkup(keyboard)
-        update.message.reply_text('Salam! Mən sizin qurupunuzda insan adları tapmağ üçün yaradılmış Oyun botuyam. Məni qurupa əlavə edərək oynaya bilərsiz.', reply_to_message_id=True, reply_markup=reply_markup)
+        update.message.reply_text(f'**Salam {mention}!🛐 Mən sizin qurupunuzda oyun apara bilərəm... 🦕\n Lakin, ilk öncə məni qurupa əlavə edin. 😚**', reply_to_message_id=True, reply_markup=reply_markup)
     else:
         chat_id = update.message.chat.id
         user_id = update.message.from_user.id
